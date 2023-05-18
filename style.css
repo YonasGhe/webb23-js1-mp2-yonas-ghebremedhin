@@ -1,0 +1,24 @@
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: slategrey;
+}
+#container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+    
+}
+form{
+    color: #123;
+    
+}
+div{
+    color: black;
+}
+#restart{
+    color: blue;
+}
