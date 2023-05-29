@@ -3,11 +3,16 @@ const games = ["rock", "paper", "scissors"];
 const form = document.querySelector("form");
 form.addEventListener("submit", nameInpute);
 
+const inputName = document.querySelector("input");
+const userName = document.querySelector("h4");
+
+
 function nameInpute(event){
     event.preventDefault();
-    const name = document.querySelector("input");
-
+    userName.innerText = inputName.value;
+    form.reset();
 }
+
 const rockButton = document.querySelector("#rock");
 const paperButton = document.querySelector("#paper");
 const scissorsButton = document.querySelector("#scissors");
@@ -40,13 +45,14 @@ function playRound(playerChoice) {
     if (playerScore === 3) {
         setTimeout(() => {
             alert("Congratulations! You are the winner!");    
+            restart();
         }, 100);
-        restart();
+        
     } else if (computerScore === 3) {
         setTimeout(() => {
             alert("Sorry, you lost. Better luck next time!");
+            restart();
         }, 100);
-        restart();
     }
 }
 
@@ -77,12 +83,9 @@ restartButton.addEventListener("click", restart);
 function restart(){
         playerScore = 0;
         computerScore = 0;
-        round = 1;
         result.innerText = "";
         playerScoreElement.innerText = "Player score: 0";
         computerScoreElement.innerText = "Computer score:  0";
+        userName.innerText = "";
         form.reset();
-    }   
-
-
-
+    } 
