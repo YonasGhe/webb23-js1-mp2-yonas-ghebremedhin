@@ -9,7 +9,7 @@ const userName = document.querySelector("h4");
 
 function nameInpute(event){
     event.preventDefault();
-    userName.innerText = inputName.value;
+    userName.innerText = `Welcome ${inputName.value}`;
     form.reset();
 }
 
