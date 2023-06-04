@@ -1,3 +1,4 @@
+//An array for the game tools to play
 const games = ["rock", "paper", "scissors"];
 
 const form = document.querySelector("form");
@@ -6,13 +7,14 @@ form.addEventListener("submit", nameInpute);
 const inputName = document.querySelector("input");
 const userName = document.querySelector("h4");
 
-
+//players usersname inpute
 function nameInpute(event){
     event.preventDefault();
     userName.innerText = `Welcome ${inputName.value}`;
     form.reset();
 }
 
+//get references to the elements
 const rockButton = document.querySelector("#rock");
 const paperButton = document.querySelector("#paper");
 const scissorsButton = document.querySelector("#scissors");
@@ -27,6 +29,7 @@ rockButton.addEventListener("click", () => playRound("rock"));
 paperButton.addEventListener("click", () => playRound("paper"));
 scissorsButton.addEventListener("click", () => playRound("scissors"));
 
+//players guess 
 function playRound(playerChoice) {
     
     const computerChoice = computerPlay();
@@ -56,11 +59,13 @@ function playRound(playerChoice) {
     }
 }
 
+//computer choice
 function computerPlay() {
     const randomIndex = Math.floor(Math.random() * games.length);
     return games[randomIndex];
 }
 
+//function to display the winner of the game
 function getWinner(playerChoice, computerChoice) {
     if (playerChoice === computerChoice) {
         return "It's a tie!";
@@ -80,6 +85,7 @@ function getWinner(playerChoice, computerChoice) {
 const restartButton = document.querySelector("#restart");
 restartButton.addEventListener("click", restart);
 
+//function to restart the game
 function restart(){
         playerScore = 0;
         computerScore = 0;
