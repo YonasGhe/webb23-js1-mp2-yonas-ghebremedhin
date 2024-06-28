@@ -7,7 +7,7 @@
 
     required
    
-. The player should be able to enter their name through a text input so that it appears on the page.
+The player should be able to enter their name through a text input so that it appears on the page.
 . The player must choose rock scissors or bag by clicking on a picture or button.
 . When the player has chosen, the computer's choice must have been randomly generated and displayed in the browser together with the player's choice.
 . The player and computer score should be displayed in the browser.
